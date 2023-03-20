@@ -4,3 +4,10 @@
     gap: 18px;
     margin-bottom: 17px;
 }
+
+@media screen and (max-width:620px) {
+    .profile__info  {
+       margin-bottom: 14px;
+       gap: 10px;
+    }
+}
