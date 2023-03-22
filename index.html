@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/index.css">
     <title>Mesto</title>
 </head>
-
 <body class="page">
     <header class="header">
         <img class="header__img" src="./image/mesto.svg" alt="Место">
@@ -30,42 +29,42 @@
                     <img class="element__img" src="./image/Карачаевск.jpg" alt="Карачаевск">
                     <div class="element__info">
                         <h2 class="element__title">Карачаевск</h2>
-                        <button class="element__button link" href="#"><img class="element__img" src="./image/serdechko.svg"></button>
+                        <button class="element__button link" href="#"><img class="element__image" src="./image/serdechko.svg"></button>
                     </div>
                 </li>
                 <li class="element">
                     <img class="element__img" src="./image/гора Эльбрус.png" alt="гора Эльбрус">
                     <div class="element__info">
                         <h2 class="element__title">Гора Эльбрус</h2>
-                        <button class="element__button link" href="#"><img class="element__img" src="./image/serdechko.svg"></button>
+                        <button class="element__button link" href="#"><img class="element__image" src="./image/serdechko.svg"></button>
                     </div>
                 </li>
                 <li class="element">
                     <img class="element__img" src="./image/Домбай.png" alt="Домбай">
                     <div class="element__info">
                         <h2 class="element__title">Домбай</h2>
-                        <button class="element__button link" href="#"><img class="element__img" src="./image/serdechko.svg"></button>
+                        <button class="element__button link" href="#"><img class="element__image" src="./image/serdechko.svg" src="./image/serdechko.svg"></button>
                     </div>
                 </li>
                 <li class="element">
                     <img class="element__img" src="./image/гора Эльбрус.png" alt="гора Эльбрус">
                     <div class="element__info">
                         <h2 class="element__title">Гора Эльбрус</h2>
-                        <button class="element__button link" href="#"><img class="element__img" src="./image/serdechko.svg"></button>
+                        <button class="element__button link" href="#"><img class="element__image" src="./image/serdechko.svg"></button>
                     </div>
                 </li>
                 <li class="element">
                     <img class="element__img" src="./image/Домбай.png" alt="Домбай">
                     <div class="element__info">
                         <h2 class="element__title">Домбай</h2>
-                        <button class="element__button link" href="#"><img class="element__img" src="./image/serdechko.svg"></button>
+                        <button class="element__button link" href="#"><img class="element__image" src="./image/serdechko.svg"></button>
                     </div>
                 </li>
                 <li class="element">
                     <img class="element__img" src="./image/Карачаевск.jpg" alt="Карачаевск">
                     <div class="element__info">
                         <h2 class="element__title">Карачаево-Черкесия</h2>
-                        <button class="element__button link" href="#"><img class="element__img" src="./image/serdechko.svg"></button>
+                        <button class="element__button link" href="#"><img class="element__image" src="./image/serdechko.svg"></button>
                     </div>
                 </li>
             </ul>
@@ -75,8 +74,18 @@
         <h2 class="footer__title">&copy; Mesto Russia 2023</h2>
     </footer>
     <section class="popup">
-        <div class="popup__content"></div>
+        <div class="popup__content">
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <button class="popup__close link"></button>
+            <form class="popup__form" method="post">
+                <fieldset class="popup__fieldset">
+                    <input type ="text" class="popup__input popup__input_type_name" name="name" placeholder="Введите ваше имя">
+                    <input type ="text" class="popup__input popup__input_type_job" name="job" placeholder="Введите ваш род занятий">
+                </fieldset>
+                <button type="submit" class="popup__form-button link">Сохранить</button>
+            </form>
+        </div>
     </section>
+    <script src="./index.js"></script>
 </body>
-
 </html>
