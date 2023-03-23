@@ -1,4 +1,4 @@
-.container__content_list {
+.container__content-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2 ,1fr);
@@ -9,13 +9,13 @@
 }
 
 @media screen and (max-width:767px) {
-    .container__content_list {
+    .container__content-list {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 540px) {
-    .container__content_list {
+    .container__content-list {
         grid-template-columns: 1fr;
     }
 }
