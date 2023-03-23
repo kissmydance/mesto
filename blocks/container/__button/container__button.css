@@ -1,0 +1,18 @@
+.container__button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    width: 22px;
+    height: 19px;
+    padding: 0;
+    background-image: url(../../../image/serdechko.svg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container__button:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+    cursor: pointer;
+}

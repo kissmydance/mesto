@@ -1,10 +1,8 @@
-.element__info {
+.container__info {
     background-color: #fff;
-    min-height: 79px;
     display: flex;
     align-items: center;
-    padding-left: 21px;
-    padding-right: 20px;
+    padding: 25px 20px 31px 21px;
     box-sizing: border-box;
     justify-content: space-between;
 }

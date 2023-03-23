@@ -1,7 +1,9 @@
 .header__img {
+    display: block;
     width: 142px;
     height: 33px;
     padding-bottom: 41px;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 880px) {

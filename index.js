@@ -1,32 +1,31 @@
-const moreInfoLink = document.querySelector(".profile__edit-button");
-const moreInfoPopup = document.querySelector(".popup");
-const moreInfoPopupCloseButton = moreInfoPopup.querySelector(".popup__close");
-const popupInputName = moreInfoPopup.querySelector(".popup__input_type_name");
-const popupInputJob = moreInfoPopup.querySelector(".popup__input_type_job");
-const popupSubmitButton = moreInfoPopup.querySelector(".popup__form-button");
-const popupForm = moreInfoPopup.querySelector(".popup__form");
+const editingButton = document.querySelector(".profile__edit-button");
+const popupOpen = document.querySelector(".popup");
+const popupCloseButton = popupOpen.querySelector(".popup__close");
+const popupInputName = popupOpen.querySelector(".popup__input_type_name");
+const popupInputJob = popupOpen.querySelector(".popup__input_type_job");
+const popupSubmitButton = popupOpen.querySelector(".popup__form_button");
+const popupForm = popupOpen.querySelector(".popup__form");
 const popupProfileName = document.querySelector(".profile__name");
 const popupProfileJob = document.querySelector(".profile__job");
 
 
 
-moreInfoLink.addEventListener('click', () => {
-    moreInfoPopup.classList.add("popup__open");
-    popupInputName.value = popupProfileName.innerHTML;
-    popupInputJob.value =  popupProfileJob.innerHTML;
+editingButton.addEventListener('click', () => {
+    popupOpen.classList.add("popup__opened");
+    popupInputName.value = popupProfileName.textContent;
+    popupInputJob.value =  popupProfileJob.textContent;
 });
 
-moreInfoPopupCloseButton.addEventListener('click', () => {
-    moreInfoPopup.classList.remove("popup__open");
+popupCloseButton.addEventListener('click', () => {
+    popupOpen.classList.remove("popup__opened");
 });
 
 
 
 popupForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    popupProfileName.innerHTML = popupInputName.value;
-    moreInfoPopup.classList.remove("popup__open");
-    popupProfileJob.innerHTML = popupInputJob.value;
-    moreInfoPopup.classList.remove("popup__open");
+    popupProfileName.textContent = popupInputName.value;
+    popupProfileJob.textContent = popupInputJob.value;
+    popupOpen.classList.remove("popup__opened");
 
 });

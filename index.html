@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/index.css">
-    <title>Mesto</title>
+    <title lang="en">Mesto</title>
 </head>
 <body class="page">
     <header class="header">
@@ -13,68 +13,68 @@
     </header>
     <main class="content">
         <section class="profile">
-            <img class="profile__avatar" src="./image/avatar.png">
+            <img class="profile__avatar" src="./image/avatar.png" alt="аватарка">
             <div class="profile__user">
                 <div class="profile__info">
                     <h1 class="profile__name">Жак-Ив Кусто</h1>
-                    <button class="profile__edit-button link" href="#"><img class="profile__img" src="./image/карандаш.svg"></button>
+                    <button type="button" class="profile__edit-button" aria-label="открыть попап"></button>
                 </div>
                 <p class="profile__job">Исследователь океана</p>
             </div>
-            <button class="profile__add-button link" href="#"><img class="profile__add-img" src="./image/+.svg"></button>
+            <button type="button" class="profile__add-button" aria-label="добавить"></button>
         </section>
-        <section class="elements">
-            <ul class="elements__content">
-                <li class="element">
-                    <img class="element__img" src="./image/Карачаевск.jpg" alt="Карачаевск">
-                    <div class="element__info">
-                        <h2 class="element__title">Карачаевск</h2>
-                        <button class="element__button link" href="#"><img class="element__image" src="./image/serdechko.svg"></button>
+        <section class="container">
+            <ul class="container__content_list">
+                <li class="container__content">
+                    <img class="container__img" src="./image/Карачаевск.jpg" alt="Карачаевск">
+                    <div class="container__info">
+                        <h2 class="container__title">Карачаевск</h2>
+                        <button type="button" class="container__button" aria-label="лайк"></button>
                     </div>
                 </li>
-                <li class="element">
-                    <img class="element__img" src="./image/гора Эльбрус.png" alt="гора Эльбрус">
-                    <div class="element__info">
-                        <h2 class="element__title">Гора Эльбрус</h2>
-                        <button class="element__button link" href="#"><img class="element__image" src="./image/serdechko.svg"></button>
+                <li class="container__content">
+                    <img class="container__img" src="./image/гораЭльбрус.png" alt="гора Эльбрус">
+                    <div class="container__info">
+                        <h2 class="container__title">Гора Эльбрус</h2>
+                        <button type="button" class="container__button" aria-label="лайк"></button>
                     </div>
                 </li>
-                <li class="element">
-                    <img class="element__img" src="./image/Домбай.png" alt="Домбай">
-                    <div class="element__info">
-                        <h2 class="element__title">Домбай</h2>
-                        <button class="element__button link" href="#"><img class="element__image" src="./image/serdechko.svg"></button>
+                <li class="container__content">
+                    <img class="container__img" src="./image/Домбай.png" alt="Домбай">
+                    <div class="container__info">
+                        <h2 class="container__title">Домбай</h2>
+                        <button type="button" class="container__button" aria-label="лайк"></button>
                     </div>
                 </li>
-                <li class="element">
-                    <img class="element__img" src="./image/гора Эльбрус.png" alt="гора Эльбрус">
-                    <div class="element__info">
-                        <h2 class="element__title">Гора Эльбрус</h2>
-                        <button class="element__button link" href="#"><img class="element__image" src="./image/serdechko.svg"></button>
+                <li class="container__content">
+                    <img class="container__img" src="./image/гораЭльбрус.png" alt="гора Эльбрус">
+                    <div class="container__info">
+                        <h2 class="container__title">Гора Эльбрус</h2>
+                        <button type="button" class="container__button" aria-label="лайк"></button>
                     </div>
                 </li>
-                <li class="element">
-                    <img class="element__img" src="./image/Домбай.png" alt="Домбай">
-                    <div class="element__info">
-                        <h2 class="element__title">Домбай</h2>
-                        <button class="element__button link" href="#"><img class="element__image" src="./image/serdechko.svg"></button>
+                <li class="container__content">
+                    <img class="container__img" src="./image/Домбай.png" alt="Домбай">
+                    <div class="container__info">
+                        <h2 class="container__title">Домбай</h2>
+                        <button type="button" class="container__button" aria-label="лайк"></button>
                     </div>
                 </li>
-                <li class="element">
-                    <img class="element__img" src="./image/Карачаевск.jpg" alt="Карачаевск">
-                    <div class="element__info">
-                        <h2 class="element__title">Карачаево-Черкесия</h2>
-                        <button class="element__button link" href="#"><img class="element__image" src="./image/serdechko.svg"></button>
+                <li class="container__content">
+                    <img class="container__img" src="./image/Карачаевск.jpg" alt="Карачаевск">
+                    <div class="container__info">
+                        <h2 class="container__title">Карачаево-Черкесия</h2>
+                        <button type="button" class="container__button" aria-label="лайк"></button>
                     </div>
                 </li>
             </ul>
         </section>
     </main>
     <footer class="footer">
-        <h2 class="footer__title">&copy; Mesto Russia 2023</h2>
+        <p class="footer__title" lang="en">&copy; Mesto Russia 2023</p>
     </footer>
-    <section class="popup">
-        <div class="popup__content">
+    <div class="popup">
+        <div class="popup__container">
             <h2 class="popup__title">Редактировать профиль</h2>
             <button class="popup__close link"></button>
             <form class="popup__form" method="post">
@@ -82,10 +82,10 @@
                     <input type ="text" class="popup__input popup__input_type_name" name="name" placeholder="Введите ваше имя">
                     <input type ="text" class="popup__input popup__input_type_job" name="job" placeholder="Введите ваш род занятий">
                 </fieldset>
-                <button type="submit" class="popup__form-button link">Сохранить</button>
+                <button type="submit" class="popup__form_button">Сохранить</button>
             </form>
         </div>
-    </section>
-    <script src="./index.js"></script>
+    </div>
+    <script src="./index.js" defer></script>
 </body>
 </html>
