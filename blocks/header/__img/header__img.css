@@ -13,8 +13,8 @@
 
 @media screen and (max-width:767px) {
     .header__img {
-        height: 26px;
+        height: 25px;
         padding-bottom: 31px;
-        width: 110px;
+        width: 104px;
     }
 }

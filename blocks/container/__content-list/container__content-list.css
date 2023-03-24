@@ -8,13 +8,13 @@
     list-style-type: none;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:920px) {
     .container__content-list {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 620px) {
     .container__content-list {
         grid-template-columns: 1fr;
     }

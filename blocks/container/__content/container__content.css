@@ -1,7 +1,7 @@
 .container__content {
     display: flex;
     flex-direction: column;
-    max-width: 282px;
+    width: 282px;
     overflow: hidden;
     border-radius: 10px;
     color: #000;
