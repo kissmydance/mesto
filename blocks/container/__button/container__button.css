@@ -1,5 +1,5 @@
 .container__button {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
     border: none;
     width: 22px;
     height: 19px;
@@ -9,10 +9,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .container__button:hover {
     opacity: 0.5;
-    transition: 0.3s;
-    cursor: pointer;
 }

@@ -8,22 +8,23 @@
     border: 1px solid #fff;
     background-color: rgba(0, 0, 0, 0);
     padding: 0;
-    background-image: url(../../../image/кнопка\ с\ карандашом\ большая.svg);
+    background-image: url(../../../image/pensil.svg);
     object-fit: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 10px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 @media screen and (max-width:620px) {
     .profile__edit-button {
         width: 18px;
         height: 18px;
-        background-image: url(../../../image/кнопка\ с\ карандашом\ маленькая.svg);
+        background-size: 8px;
     }
 }
 
 .profile__edit-button:hover {
     opacity: 0.6;
-    transition: 0.3s;
-    cursor: pointer;
 }
