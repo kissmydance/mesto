@@ -19,6 +19,9 @@
 @import url(../blocks/container/__img/container__img.css);
 @import url(../blocks/container/__title/container__title.css);
 @import url(../blocks/container/__info/container__info.css);
+@import url(../blocks/container/__delete-button/container__delete-button.css);
+@import url(../blocks/container/__button-img/container__button-img.css);
+@import url(../blocks/container/__button-img_type_active/container__button-img_type_active.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__title/footer__title.css);
 
