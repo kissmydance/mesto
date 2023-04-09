@@ -1,4 +1,4 @@
-.container__button {
+.container__button-like {
     background-color: transparent;
     border: none;
     width: 22px;
@@ -11,6 +11,6 @@
     align-self: center;
 }
 
-.container__button:hover {
+.container__button-like:hover {
     opacity: 0.5;
 }
