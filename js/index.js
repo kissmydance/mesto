@@ -60,13 +60,16 @@ const createCardElement = (cardData) => {
 
     deleteButton.addEventListener('click', handleDelete);
     likeButton.addEventListener('click', handlelike);
-    cardImg.addEventListener('click', () => popupOpenImg(cardData));
+    cardImg.addEventListener('click', () => openImgPopup(cardData));
 
     return cardElement;
 };
-
 const renderCardElement = (cardElement) => {
-    cardGrid.prepend(cardElement);
+    cardGrid.append(cardElement);
+};
+
+const renderNewCardElement = (cardElement) => {
+cardGrid.prepend(cardElement)
 };
 
 initialCards.forEach((card) => {
@@ -86,9 +89,8 @@ const submitAddNewImg = (event) => {
         name,
         link,
     };
-    renderCardElement(createCardElement(newImg));
+    renderNewCardElement(createCardElement(newImg));
     closePopup(addNewImagePopup);
-    addNewImagePopup.reset();
 };
 
 function openImgPopup (cardData) {
@@ -105,15 +107,3 @@ addNewImageButton.addEventListener('click', () => openPopup(addNewImagePopup));
 popupAddImgCloseButton.addEventListener('click', () => closePopup(addNewImagePopup));
 addNewImgForm.addEventListener('submit', submitAddNewImg);
 popupOpenImgCloseButton.addEventListener('click', () => closePopup(popupOpenImg));
-
-
-
-
-
-
-
-
-
-
-
-
