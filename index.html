@@ -37,12 +37,18 @@
         <div class="popup__container">
             <h2 class="popup__title">Редактировать профиль</h2>
             <button type="button" class="popup__close"></button>
-            <form class="popup__form" method="post">
+            <form class="popup__form" method="post" novalidate>
                 <fieldset class="popup__fieldset">
-                    <input type="text" class="popup__input popup__input_type_name" name="name"
-                        placeholder="Введите ваше имя">
-                    <input type="text" class="popup__input popup__input_type_job" name="job"
-                        placeholder="Введите ваш род занятий">
+                    <div class="popup__input-container">
+                        <input id="name" type="text" class="popup__input popup__input_type_name" name="name"
+                            placeholder="Введите ваше имя" required minlength="2" maxlength="40" autocomplete="off">
+                        <span id="error-name" class="popup__error">Заполните это поле.</span>
+                    </div>
+                    <div class="popup__input-container">
+                        <input id="job" type="text" class="popup__input popup__input_type_job" name="job"
+                            placeholder="Введите ваш род занятий" required minlength="2" maxlength="200" autocomplete="off">
+                        <span id="error-job" class="popup__error">Заполните это поле.</span>
+                    </div>
                 </fieldset>
                 <button type="submit" class="popup__form-button">Сохранить</button>
             </form>
@@ -52,11 +58,18 @@
         <div class="popup__container">
             <h2 class="popup__title">Новое Место</h2>
             <button type="button" class="popup__close"></button>
-            <form class="popup__form" method="post">
+            <form class="popup__form" method="post" novalidate>
                 <fieldset class="popup__fieldset">
-                    <input type="text" class="popup__input popup__input_type_title" name="title" placeholder="Название">
-                    <input type="url" class="popup__input popup__input_type_link-img" name="link-img"
-                        placeholder="Ссылка на картинку">
+                    <div class="popup__input-container">
+                        <input id="place" type="text" class="popup__input popup__input_type_title" name="title"
+                            placeholder="Название" required minlength="1" maxlength="30" autocomplete="off">
+                        <span id="error-place" class="popup__error">Вы пропустили это поле.</span>
+                    </div>
+                    <div class="popup__input-container">
+                        <input id="link" type="url" class="popup__input popup__input_type_link-img" name="link-img"
+                            placeholder="Ссылка на картинку" required autocomplete="off">
+                        <span id="error-link" class="popup__error">Введите адрес сайта.</span>
+                    </div>
                 </fieldset>
                 <button type="submit" class="popup__form-button">Создать</button>
             </form>
@@ -74,8 +87,8 @@
             <img class="container__img" src="/" alt="">
             <div class="container__info">
                 <h2 class="container__title"></h2>
-                <button type="button" class="container__button-like" aria-label="лайк"><img class="container__button-img"
-                        alt="лайк" src="./image/serdechko.svg"></button>
+                <button type="button" class="container__button-like" aria-label="лайк"><img
+                        class="container__button-img" alt="лайк" src="./image/serdechko.svg"></button>
             </div>
             <button type="button" class="container__delete-button"><img class="container__delete-button-img"
                     alt="кнопка удаления" src="./image/yrna.svg"></button>
@@ -83,5 +96,7 @@
     </template>
     <script src="./js/cards.js" defer></script>
     <script src="./js/index.js" defer></script>
+    <script src="./js/validate.js" defer></script>
 </body>
+
 </html>
