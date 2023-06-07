@@ -4,7 +4,7 @@ const enableValidationConfig = {
     submitButtonSelector: '.popup__form-button',
     inactiveButtonClass: 'popup__form-button_disabled',
     inputErrorClass: 'popup__input_invalid',
-    errorClass: 'popup__error_visible'
+    errorClass: 'popup__error'
   }; 
 
   function enableValidation(enableValidationConfig) {
@@ -19,7 +19,7 @@ function checkInputValidation(input, enableValidationConfig) {
     if (input.checkValidity()) {
         input.classList.remove(enableValidationConfig.inputErrorClass);
         errorElementPopup.classList.remove(enableValidationConfig.errorClass);
-        errorElementPopup.textContent = ''
+        errorElementPopup.textContent = '';
     }
     else {
         input.classList.add(enableValidationConfig.inputErrorClass);

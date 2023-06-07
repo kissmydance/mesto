@@ -26,7 +26,7 @@ const openPopup = (popup) => {
 
 const closePopup = (popup) => { 
     popup.classList.remove("popup_opened");
-    document.addEventListener('keydown', closePopupEscape);
+    document.removeEventListener('keydown', closePopupEscape);
 };
 
 function openUserInfoPopup() {
@@ -121,15 +121,14 @@ const closePopupClickOverlay = function (event) {
 editingButton.addEventListener('click', openUserInfoPopup);
 popupCloseButton.addEventListener('click', () => closePopup(popupUserInfo));
 popupUserInfoForm.addEventListener('submit', submitUserInfo);
-addNewImageButton.addEventListener('click', () => openPopup(addNewImagePopup));
+addNewImageButton.addEventListener('click', () => {
+    openPopup(addNewImagePopup);
+    popupFormButton.setAttribute('disabled', '');
+    popupFormButton.classList.add('popup__form-button_disabled');
+});
 popupAddImgCloseButton.addEventListener('click', () => closePopup(addNewImagePopup));
 addNewImgForm.addEventListener('submit', submitAddNewImg);
-addNewImagePopup.addEventListener('click', () => {
-    popupFormButton.classList.add('popup__form-button_disabled');
-    popupFormButton.setAttribute('disabled', ''); 
-    closePopup(popupOpenImg);
-});
+addNewImagePopup.addEventListener('click', () => closePopup(popupOpenImg));
 popupOpenImg.addEventListener('click', closePopupClickOverlay);
 addNewImagePopup.addEventListener('click', closePopupClickOverlay);
 popupUserInfo.addEventListener('click', closePopupClickOverlay);
-
