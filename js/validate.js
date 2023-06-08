@@ -10,7 +10,7 @@ const enableValidationConfig = {
   function enableValidation(enableValidationConfig) {
     const forms = Array.from(document.querySelectorAll(enableValidationConfig.formSelector));
     forms.forEach(form => {
-        getInputEvent(form, enableValidationConfig)
+        setEventListeners(form, enableValidationConfig);
     })
 }
 
@@ -30,12 +30,12 @@ function checkInputValidation(input, enableValidationConfig) {
 
 function disableButton(button, enableValidationConfig) {
     button.setAttribute('disabled', '');
-    button.classList.add(enableValidationConfig.inactiveButtonClass)
+    button.classList.add(enableValidationConfig.inactiveButtonClass);
 };
 
 function enableButton(button, enableValidationConfig) {
     button.removeAttribute('disabled');
-    button.classList.remove(enableValidationConfig.inactiveButtonClass)
+    button.classList.remove(enableValidationConfig.inactiveButtonClass);
 
 };
 
@@ -48,9 +48,9 @@ function toggleButtonValidity(form, enableValidationConfig) {
     }
 }
 
-function getInputEvent(form, enableValidationConfig) {
+function setEventListeners(form, enableValidationConfig) {
 const inputs = Array.from(form.querySelectorAll(enableValidationConfig.inputSelector));
-
+toggleButtonValidity(form, enableValidationConfig);
 inputs.forEach((input) => {
     input.addEventListener('input', () => {
         checkInputValidation(input, enableValidationConfig);
@@ -58,9 +58,8 @@ inputs.forEach((input) => {
     });
 });
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-});
-};
-
+form.addEventListener('reset', () => {
+    disableButton(submitButton, enableValidationConfig);
+  });
+}
 enableValidation(enableValidationConfig);

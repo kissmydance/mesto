@@ -17,7 +17,9 @@ const popupOpenImg = document.querySelector(".popup_open-img");
 const popupOpenImgPicture = popupOpenImg.querySelector(".popup__img");
 const popupOpenImgTitle = popupOpenImg.querySelector(".popup__title-img");
 const popupOpenImgCloseButton = popupOpenImg.querySelector(".popup__close");
-const popupFormButton = addNewImagePopup.querySelector('.popup__form-button');
+const addNewImgPopupFormButton = addNewImagePopup.querySelector('.popup__form-button');
+const nameInput = addNewImgForm.querySelector(".popup__input_type_title");
+const imgInput = addNewImgForm.querySelector(".popup__input_type_link-img");
 
 const openPopup = (popup) => {
     popup.classList.add("popup_opened");
@@ -82,13 +84,8 @@ initialCards.forEach((card) => {
 
 const submitAddNewImg = (event) => {
     event.preventDefault();
-
-    const nameInput = addNewImgForm.querySelector(".popup__input_type_title");
-    const imgInput = addNewImgForm.querySelector(".popup__input_type_link-img");
-
     const name = nameInput.value;
     const link = imgInput.value;
-
     const newImg = {
         name,
         link,
@@ -111,24 +108,21 @@ const closePopupEscape = function (event) {
     }
 }
 
-const closePopupClickOverlay = function (event) {
-    if (event.target !== event.currentTarget) {
-        return;
-    } 
-    closePopup(event.target);
-    }
+popups.forEach((popup) => {
+    popup.addEventListener('mousedown', (evt) => {
+        if (evt.target.classList.contains('popup_opened')) {
+            closePopup(popup)
+        }
+        if (evt.target.classList.contains('popup__close')) {
+            closePopup(popup)
+        }
+    })
+})
 
 editingButton.addEventListener('click', openUserInfoPopup);
-popupCloseButton.addEventListener('click', () => closePopup(popupUserInfo));
 popupUserInfoForm.addEventListener('submit', submitUserInfo);
 addNewImageButton.addEventListener('click', () => {
     openPopup(addNewImagePopup);
-    popupFormButton.setAttribute('disabled', '');
-    popupFormButton.classList.add('popup__form-button_disabled');
-});
-popupAddImgCloseButton.addEventListener('click', () => closePopup(addNewImagePopup));
+ });
 addNewImgForm.addEventListener('submit', submitAddNewImg);
-addNewImagePopup.addEventListener('click', () => closePopup(popupOpenImg));
-popupOpenImg.addEventListener('click', closePopupClickOverlay);
-addNewImagePopup.addEventListener('click', closePopupClickOverlay);
-popupUserInfo.addEventListener('click', closePopupClickOverlay);
+
