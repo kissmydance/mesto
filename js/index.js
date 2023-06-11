@@ -90,6 +90,7 @@ const submitAddNewImg = (event) => {
         name,
         link,
     };
+    addNewImgForm.reset();
     renderNewCardElement(createCardElement(newImg));
     closePopup(addNewImagePopup);
 };
