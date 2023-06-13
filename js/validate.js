@@ -59,6 +59,7 @@ inputs.forEach((input) => {
 });
 
 form.addEventListener('reset', () => {
+    const submitButton = form.querySelector(enableValidationConfig.submitButtonSelector);
     disableButton(submitButton, enableValidationConfig);
   });
 }
