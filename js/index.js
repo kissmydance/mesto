@@ -45,7 +45,7 @@ function submitUserInfo(event) {
 
 function renderCardElement(item, cardGrid) {
     const card = new Card(item, ".template-img", openImgPopup);
-    const cardElement = Card.createCard();
+    const cardElement = card.createCard();
     cardGrid.append(cardElement);
 };
 
