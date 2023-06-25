@@ -2,7 +2,7 @@ class FormValidator {
     constructor(config, form) {
         this._config = config;
         this._form = form;
-        this._inputs = Array.from(this._form.querySelectorAll(this.config.inputSelector));
+        this._inputs = Array.from(this._form.querySelectorAll(this._config.inputSelector));
         this._submitButton = this._form.querySelector(this._config.submitButtonSelector);
     }
 
@@ -37,12 +37,12 @@ _checkInputValidation(input) {
 
 _disableButton() {
     this._submitButton.setAttribute('disabled', '');
-    this._submitButton.classList.add(enableValidationConfig.inactiveButtonClass);
+    this._submitButton.classList.add(this._config.inactiveButtonClass);
 };
 
  _enableButton() {
     this._submitButton.removeAttribute('disabled');
-    this._submitButton.classList.remove(enableValidationConfig.inactiveButtonClass);
+    this._submitButton.classList.remove(this._config.inactiveButtonClass);
 
 };
 

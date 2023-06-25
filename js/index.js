@@ -1,8 +1,9 @@
-import initialCards from "./initialCards";
-import Card from "./Card";
-import FormValidator from "./FormValidator";
-import validationConfig from "./validationConfig";
-const popups = document.querySelectorAll(".popup");
+import initialCards from './initialCards.js';
+import Card from './Card.js';
+import FormValidator from './FormValidator.js';
+import validationConfig from './validationConfig.js';
+
+const popups = Array.from(document.querySelectorAll(".popup"));
 const editingButton = document.querySelector(".profile__edit-button");
 const popupUserInfo = document.querySelector(".popup_type_user-info");
 const popupInputName = popupUserInfo.querySelector(".popup__input_type_name");
@@ -10,9 +11,9 @@ const popupInputJob = popupUserInfo.querySelector(".popup__input_type_job");
 const popupUserInfoForm = popupUserInfo.querySelector(".popup__form");
 const popupProfileName = document.querySelector(".profile__name");
 const popupProfileJob = document.querySelector(".profile__job");
-const addNewImagePopup = document.querySelector(".popup_type_add-img");
-const addNewImageButton = document.querySelector(".profile__add-button");
-const addNewImgForm = addNewImagePopup.querySelector(".popup__form");
+const popupAddCard = document.querySelector(".popup_type_add-img");
+const buttonAddNewImage = document.querySelector(".profile__add-button");
+const addNewImgForm = popupAddCard.querySelector(".popup__form");
 const cardGrid = document.querySelector(".container__content-list");
 const popupOpenImg = document.querySelector(".popup_open-img");
 const popupOpenImgPicture = popupOpenImg.querySelector(".popup__img");
@@ -67,7 +68,7 @@ const submitAddNewImg = (event) => {
     };
     addNewImgForm.reset();
     renderNewCardElement(createCardElement(newImg));
-    closePopup(addNewImagePopup);
+    closePopup(popupAddCard);
 };
 
 function openImgPopup (item) {
@@ -100,8 +101,8 @@ popupUserInfoFormValidation.enableValidation();
 addNewImgFormValidation.enableValidation();
 editingButton.addEventListener('click', openUserInfoPopup);
 popupUserInfoForm.addEventListener('submit', submitUserInfo);
-addNewImageButton.addEventListener('click', () => {
-    openPopup(addNewImagePopup);
+buttonAddNewImage.addEventListener('click', () => {
+    openPopup(popupAddCard);
  });
 addNewImgForm.addEventListener('submit', submitAddNewImg);
 

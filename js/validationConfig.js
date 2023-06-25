@@ -6,5 +6,4 @@ const validationConfig = {
     inputErrorClass: 'popup__input_invalid',
     errorClass: 'popup__error'
   }; 
-
-export default validationConfig;
+  export default validationConfig;

@@ -17,26 +17,30 @@ class Card {
     this._likeButton = this._cardElement.querySelector('.container__button-like');
     this._deleteButton = this._cardElement.querySelector('.container__delete-button');
     this._cardName = this._cardElement.querySelector('.container__title');
-    this.cardImg = this._cardElement.querySelector('.container__img');
+    this._cardImg = this._cardElement.querySelector('.container__img');
     return this._cardElement;
   }
+
   _insertCardContent() {
     this._cardName.textContent = this._data.name;
     this._cardImg.src = this._data.link;
     this._cardImg.alt = this._data.name;
   }
+
   _setEventListeners() {
     this._likeButton.addEventListener('click', () => this._handlelike());
     this._deleteButton.addEventListener('click', () => this._deleteCard());
-    this._imageCardPicture.addEventListener('click', () => this._openImagePopup());
+    this._cardImg.addEventListener('click', () => this._openImagePopup());
   }
 
   _handlelike() {
     this._likeButton.classList.toggle('container__button-img_type_active');
   }
+
   _handleDelete() {
     this._cardElement.remove();
   }
+
   _openImagePopup() {
     this._openImage(this._data)
   }
