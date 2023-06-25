@@ -29,7 +29,7 @@ class Card {
 
   _setEventListeners() {
     this._likeButton.addEventListener('click', () => this._handlelike());
-    this._deleteButton.addEventListener('click', () => this._deleteCard());
+    this._deleteButton.addEventListener('click', () => this._handleDelete());
     this._cardImg.addEventListener('click', () => this._openImagePopup());
   }
 

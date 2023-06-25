@@ -72,9 +72,9 @@ const submitAddNewImg = (event) => {
 };
 
 function openImgPopup (item) {
-    popupOpenImgPicture.src = cardData.link;
-    popupOpenImgTitle.textContent = cardData.name;
-    popupOpenImgPicture.alt = cardData.name;
+    popupOpenImgPicture.src = item.link;
+    popupOpenImgTitle.textContent = item.name;
+    popupOpenImgPicture.alt = item.name;
     openPopup(popupOpenImg);
 };
 
