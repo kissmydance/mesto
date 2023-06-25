@@ -1,5 +1,5 @@
 import FormValidator from "./FormValidator";
-import validationConfig from "./ValidationConfig";
+import validationConfig from "./validationConfig";
 import initialCards from "./initialCards";
 import Card from "./Card";
 const popups = document.querySelectorAll(".popup");
