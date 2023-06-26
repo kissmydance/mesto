@@ -47,7 +47,7 @@ function submitUserInfo(event) {
 function renderCardElement(item, cardGrid) {
     const card = new Card(item, ".template-img", openImgPopup);
     const cardElement = card.createCard();
-    cardGrid.append(cardElement);
+    cardGrid.prepend(cardElement);
 };
 
 function getItemFromArray (array, cardGrid) {
@@ -67,7 +67,7 @@ const submitAddNewImg = (event) => {
         link,
     };
     addNewImgForm.reset();
-    renderNewCardElement(createCardElement(newImg));
+    renderCardElement(newImg, cardGrid);
     closePopup(popupAddCard);
 };
 
@@ -103,6 +103,7 @@ editingButton.addEventListener('click', openUserInfoPopup);
 popupUserInfoForm.addEventListener('submit', submitUserInfo);
 buttonAddNewImage.addEventListener('click', () => {
     openPopup(popupAddCard);
+    addNewImgFormValidation._disableButton();
  });
 addNewImgForm.addEventListener('submit', submitAddNewImg);
 
