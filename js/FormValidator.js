@@ -35,12 +35,12 @@ _checkInputValidation(input) {
     }
 };
 
-_disableButton() {
+disableButton() {
     this._submitButton.setAttribute('disabled', '');
     this._submitButton.classList.add(this._config.inactiveButtonClass);
 };
 
- _enableButton() {
+ enableButton() {
     this._submitButton.removeAttribute('disabled');
     this._submitButton.classList.remove(this._config.inactiveButtonClass);
 

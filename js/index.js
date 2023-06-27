@@ -103,7 +103,7 @@ editingButton.addEventListener('click', openUserInfoPopup);
 popupUserInfoForm.addEventListener('submit', submitUserInfo);
 buttonAddNewImage.addEventListener('click', () => {
     openPopup(popupAddCard);
-    addNewImgFormValidation._disableButton();
+    addNewImgFormValidation.disableButton();
  });
 addNewImgForm.addEventListener('submit', submitAddNewImg);
 
