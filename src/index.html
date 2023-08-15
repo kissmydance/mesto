@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/index.css">
     <title lang="en">Mesto</title>
 </head>
 
 <body class="page">
     <header class="header">
-        <img class="header__img" src="./image/mesto.svg" alt="Место">
+        <img class="header__img" src="<%=require('./image/mesto.svg')%>" alt="Место">
     </header>
     <main class="content">
         <section class="profile">
-            <img class="profile__avatar" src="./image/avatar.png" alt="аватарка">
+            <img class="profile__avatar" src="<%=require('./image/avatar.png')%>" alt="аватарка">
             <div class="profile__user">
                 <div class="profile__info">
                     <h1 class="profile__name">Жак-Ив Кусто</h1>
@@ -88,13 +87,12 @@
             <div class="container__info">
                 <h2 class="container__title"></h2>
                 <button type="button" class="container__button-like" aria-label="лайк"><img
-                        class="container__button-img" alt="лайк" src="./image/serdechko.svg"></button>
+                        class="container__button-img" alt="лайк" src="<%=require('./image/serdechko.svg')%>"></button>
             </div>
             <button type="button" class="container__delete-button"><img class="container__delete-button-img"
-                    alt="кнопка удаления" src="./image/yrna.svg"></button>
+                    alt="кнопка удаления" src="<%=require('./image/yrna.svg')%>"></button>
         </li>
     </template>
-    <script type='module' src="./js/index.js"></script>
 </body>
 
 </html>

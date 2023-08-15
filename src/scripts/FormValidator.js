@@ -48,9 +48,9 @@ disableButton() {
 
 _toggleButtonValidity() {
     if (this._form.checkValidity()) {
-        this._enableButton(this._submitButton, this._config);
+        this.enableButton(this._submitButton, this._config);
     } else {
-        this._disableButton(this._submitButton, this._config);
+        this.disableButton(this._submitButton, this._config);
     }
 }
 };

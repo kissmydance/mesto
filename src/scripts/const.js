@@ -1,0 +1,11 @@
+export const editingButton = document.querySelector(".profile__edit-button");
+export const popupUserInfo = document.querySelector(".popup_type_user-info");
+export const popupInputName = popupUserInfo.querySelector(".popup__input_type_name");
+export const popupInputJob = popupUserInfo.querySelector(".popup__input_type_job");
+export const popupUserInfoForm = popupUserInfo.querySelector(".popup__form");
+export const popupProfileName = document.querySelector(".profile__name");
+export const popupProfileJob = document.querySelector(".profile__job");
+export const popupAddCard = document.querySelector(".popup_type_add-img");
+export const buttonAddNewImage = document.querySelector(".profile__add-button");
+export const addNewImgForm = popupAddCard.querySelector(".popup__form");
+export const popupOpenImg = document.querySelector(".popup_open-img");
