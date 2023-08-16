@@ -7,5 +7,5 @@ export const popupProfileName = document.querySelector(".profile__name");
 export const popupProfileJob = document.querySelector(".profile__job");
 export const popupAddCard = document.querySelector(".popup_type_add-img");
 export const buttonAddNewImage = document.querySelector(".profile__add-button");
-export const addNewImgForm = popupAddCard.querySelector(".popup__form");
+export const formAddNewImg = popupAddCard.querySelector(".popup__form");
 export const popupOpenImg = document.querySelector(".popup_open-img");

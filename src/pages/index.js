@@ -9,17 +9,17 @@ import {
     popupProfileJob,
     popupAddCard,
     buttonAddNewImage,
-    addNewImgForm,
+    formAddNewImg,
     popupOpenImg
-} from './const.js';
-import initialCards from './initialCards.js';
-import Card from './Card.js';
-import FormValidator from './FormValidator.js';
-import validationConfig from './validationConfig.js';
-import Section from './Section.js';
-import PopupWithForm from './PopupWithForm.js';
-import PopupWithImage from './PopupWithImage.js';
-import UserInfo from './UserInfo.js';
+} from '../utils/const.js';
+import initialCards from '../utils/initialCards.js';
+import Card from '../utils/Card.js';
+import FormValidator from '../components/FormValidator.js';
+import validationConfig from '../utils/validationConfig.js';
+import Section from '../components/Section.js';
+import PopupWithForm from '../components/PopupWithForm.js';
+import PopupWithImage from '../components/PopupWithImage.js';
+import UserInfo from '../components/UserInfo.js';
 
 const popupOpenImage = new PopupWithImage(popupOpenImg);
 popupOpenImage.setEventListeners();
@@ -48,7 +48,7 @@ editingButton.addEventListener('click', () => {
 });
 
 const renderCardList = new Section({ items: initialCards, renderer: renderCard }, ".container__content-list");
-renderCardList.render();
+renderCardList.renderItems();
 
 function createCardElement(item) {
     const card = new Card(item, ".template-img", () => { popupOpenImage.open(item) })
@@ -62,6 +62,6 @@ function renderCard(item) {
 }
 
 const popupUserInfoFormValidation = new FormValidator(validationConfig, popupUserInfoForm);
-const addNewImgFormValidation = new FormValidator(validationConfig, addNewImgForm);
+const addNewImgFormValidation = new FormValidator(validationConfig, formAddNewImg);
 popupUserInfoFormValidation.enableValidation();
 addNewImgFormValidation.enableValidation();
