@@ -1,8 +1,8 @@
 class Section {
-    constructor({items, renderer}, templateSelector){
+    constructor({items, renderer}, contentList) {
         this._items = items;
         this._renderer = renderer;
-        this._templateSelector = document.querySelector(templateSelector);
+        this._contentList = document.querySelector(contentList);
     }
 
     renderItems() {
@@ -11,7 +11,7 @@ class Section {
         });
     }
     addItem(element) {
-        this._templateSelector.prepend(element)
+        this._contentList.prepend(element)
     }
 }
 

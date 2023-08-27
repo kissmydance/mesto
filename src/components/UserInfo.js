@@ -1,20 +1,20 @@
 class UserInfo {
-    constructor(nameSelector, jobSelector) {
-        this._nameSelector = nameSelector;
-        this._jobSelector = jobSelector;
+    constructor(name, job) {
+        this._name = name;
+        this._job = job;
     }
 
     getUserInfo() {
         const userInputsData = {
-            name: this._nameSelector.textContent,
-            job: this._jobSelector.textContent,
+            name: this._name.textContent,
+            job: this._job.textContent,
         }
         return userInputsData;
     }
 
     setUserInfo(userInputsData) {
-        this._nameSelector.textContent = userInputsData.name;
-        this._jobSelector.textContent = userInputsData.job;
+        this._name.textContent = userInputsData.name;
+        this._job.textContent = userInputsData.job;
     }
 }
 

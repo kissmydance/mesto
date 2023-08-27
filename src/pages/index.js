@@ -13,7 +13,7 @@ import {
     popupOpenImg
 } from '../utils/const.js';
 import initialCards from '../utils/initialCards.js';
-import Card from '../utils/Card.js';
+import Card from '../components/Card.js';
 import FormValidator from '../components/FormValidator.js';
 import validationConfig from '../utils/validationConfig.js';
 import Section from '../components/Section.js';
@@ -41,10 +41,12 @@ buttonAddNewImage.addEventListener('click', () => {
     addNewImgFormValidation.disableButton();
 });
 
+const currentUserInfo = userInfo.getUserInfo();
+
 editingButton.addEventListener('click', () => {
     userInfoPopup.open();
-    popupInputName.value = userInfo.getUserInfo().name;
-    popupInputJob.value = userInfo.getUserInfo().job;
+    popupInputName.value = currentUserInfo.name;
+    popupInputJob.value = currentUserInfo.job;
 });
 
 const renderCardList = new Section({ items: initialCards, renderer: renderCard }, ".container__content-list");
