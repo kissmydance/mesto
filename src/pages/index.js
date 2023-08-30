@@ -41,10 +41,10 @@ buttonAddNewImage.addEventListener('click', () => {
     addNewImgFormValidation.disableButton();
 });
 
-const currentUserInfo = userInfo.getUserInfo();
 
 editingButton.addEventListener('click', () => {
     userInfoPopup.open();
+    const currentUserInfo = userInfo.getUserInfo();
     popupInputName.value = currentUserInfo.name;
     popupInputJob.value = currentUserInfo.job;
 });
