@@ -11,6 +11,7 @@ import {
     buttonAddNewImage,
     formAddNewImg,
     popupOpenImg,
+    avatarImage,
     avatarImageButton,
     popupChangeAvatar,
     inputChangeAvatar,
