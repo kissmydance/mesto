@@ -29,7 +29,7 @@ import Api from '../components/Api.js';
 import PopupWithConfirmed from '../components/PopupWithConfirmed.js';
 
 const api = new Api({
-    Url: 'https://mesto.nomoreparties.co/v1/cohort-74',
+    url: 'https://mesto.nomoreparties.co/v1/cohort-74',
     headers: {
         authorization: '1821b5e2-17d4-4855-b786-25538209f183',
         'Content-type': 'application/json'
