@@ -153,6 +153,7 @@ function renderCard (item, user) {
     const cardElement = createCard(item, user);
     renderCardList.addItem(cardElement);
 }
+
 const avatarFormValidation = new FormValidator(validationConfig, popupChangeAvatarForm);
 const popupUserInfoFormValidation = new FormValidator(validationConfig, popupUserInfoForm);
 const addNewImgFormValidation = new FormValidator(validationConfig, formAddNewImg);
