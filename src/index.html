@@ -83,16 +83,18 @@
         </div>
     </div>
     <section class="popup popup_type_change-avatar">
+        <div class="popup__container">
         <button type="button" class="popup__close"></button>    
         <form class="popup__form" name="change-avatar-container" method="post" novalidate>
             <h2 class="popup__title">Обновить аватар</h2>
             <fieldset class="popup__fieldset">
-                <fieldset class="popup__input-container">
-                    <input id ="avatar" type="url" class="popup__form-input popup__form-input_avatar-name" autocomplete="off" required name="avatar" placeholder="Ссылка на аватар">
-                </fieldset>
+                <div class="popup__input-container">
+                    <input id ="avatar" type="url" class="popup__input popup__input_avatar-name" autocomplete="off" required name="avatar" placeholder="Ссылка на аватар">
+                </div>
             </fieldset>
             <button type="submit" class="popup__form-button">Сохранить</button>
         </form>
+    </div>
     </section>
     <section class="popup popup_type_delete-confirmed">
         <div class="popup__container popup__container_type_delete-confirmed">
