@@ -1,5 +1,5 @@
 class UserInfo {
-    constructor(name, job, avatar, userId) {
+    constructor({name, job, avatar, userId}) {
         this._name = name;
         this._job = job;
         this._avatar = avatar;

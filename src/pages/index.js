@@ -56,6 +56,13 @@ Promise.all([api.getUser(), api.getCards()])
         console.error(`Ошибка при загрузке данных с сервера - ${error}`)
     );
 
+const avatarFormValidation = new FormValidator(validationConfig, popupChangeAvatarForm);
+const popupUserInfoFormValidation = new FormValidator(validationConfig, popupUserInfoForm);
+const addNewImgFormValidation = new FormValidator(validationConfig, formAddNewImg);
+popupUserInfoFormValidation.enableValidation();
+addNewImgFormValidation.enableValidation();
+avatarFormValidation.enableValidation();
+
 const popupOpenImage = new PopupWithImage(popupOpenImg);
 popupOpenImage.setEventListeners();
 
@@ -70,6 +77,7 @@ confirmPopup.setEventListeners();
 
 const popupUpdateAvatar = new PopupWithForm(popupChangeAvatar, handleEditAvatar);
 popupUpdateAvatar.setEventListeners();
+
 
 editingButton.addEventListener('click', () => {
     popupUserInf.open();
@@ -153,10 +161,3 @@ function renderCard (item, user) {
     const cardElement = createCard(item, user);
     renderCardList.addItem(cardElement);
 }
-
-const avatarFormValidation = new FormValidator(validationConfig, popupChangeAvatarForm);
-const popupUserInfoFormValidation = new FormValidator(validationConfig, popupUserInfoForm);
-const addNewImgFormValidation = new FormValidator(validationConfig, formAddNewImg);
-popupUserInfoFormValidation.enableValidation();
-addNewImgFormValidation.enableValidation();
-avatarFormValidation.enableValidation();
