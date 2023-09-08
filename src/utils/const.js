@@ -14,4 +14,4 @@ export const avatarImageButton = document.querySelector(".profile__avatar-button
 export const popupChangeAvatar = document.querySelector(".popup_type_change-avatar");
 export const inputChangeAvatar = popupChangeAvatar.querySelector(".popup__input_avatar-name");
 export const popupChangeAvatarForm = popupChangeAvatar.querySelector(".popup__form");
-export const popupDeleteConfrimation = document.querySelector(".popup_type_delete-confrimed");
+export const popupDeleteConfrimation = document.querySelector(".popup_type_delete-confirmed");

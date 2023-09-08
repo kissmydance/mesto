@@ -23,10 +23,10 @@
 @import url(../blocks/container/__button-img/_type/container__button-img_type_active.css);
 @import url(../blocks/container/__delete-button/container__delete-button.css);
 @import url(../blocks/container/__button-img/container__button-img.css);
+@import url(../blocks/container/__link/container__link.css);
 @import url(../blocks/container/__like-box/container__like-box.css);
 @import url(../blocks/container/__like-bar/container__like-bar.css);
 @import url(../blocks/container/__delete-button-img/container__delete-button-img.css);
-@import url(../blocks/container/__delete-button-img/_type_visible/container__delete-button-img_type_visible.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__title/footer__title.css);
 
@@ -49,5 +49,4 @@
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/_type_delete-confirmed/popup_type_delete-confirmed.css);
 @import url(../blocks/popup/__container/_type_delete-confirmed/popup__container_type_delete-confirmed.css);
-@import url(../blocks/popup/__input-button/_type_confirmation/popup__input-button_type_confirmation.css);
 @import url(../blocks/popup/_background-dark/popup_background-dark.css);

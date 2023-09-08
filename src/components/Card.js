@@ -20,7 +20,7 @@ class Card {
 
   _createCardElement() {
     this._cardElement = document.querySelector(this._templateSelector).content.querySelector('.container__content').cloneNode(true);
-    this._likeButton = this._cardElement.querySelector('.container__button-like');
+    this._likeButton = this._cardElement.querySelector('.container__like-img');
     this._deleteButton = this._cardElement.querySelector('.container__delete-button');
     this._cardName = this._cardElement.querySelector('.container__title');
     this._cardImg = this._cardElement.querySelector('.container__img');

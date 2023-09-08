@@ -110,7 +110,7 @@ function handleFormAddNewImage(inputValues) {
         renderCard({
             name: newCard.name, _id: newCard._id, link: newCard.link, likes: newCard.likes, owner: { _id: newCard.owner._id }
         }, newCard.owner._id);
-        popupAddCard.close();
+        popupNewImageForm.close();
     })
     .catch((error => console.error(`Ошибка при попытке создать карточку ${error}`)))
     .finally(() => popupNewImageForm.setDefaultButtonText());
