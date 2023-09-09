@@ -21,7 +21,7 @@ class Card {
   _createCardElement() {
     this._cardElement = document.querySelector(this._templateSelector).content.querySelector('.container__content').cloneNode(true);
     this._likeButton = this._cardElement.querySelector('.container__like-img');
-    this._deleteButton = this._cardElement.querySelector('.container__delete-button');
+    this._deleteButton = this._cardElement.querySelector('.container__delete-button-img');
     this._cardName = this._cardElement.querySelector('.container__title');
     this._cardImg = this._cardElement.querySelector('.container__img');
     this._likeBox = this._cardElement.querySelector('.container__like-box');
@@ -44,7 +44,7 @@ class Card {
   _checkLikeStatus() {
     this._likes.forEach(item => {
       if (item._id === this._user) {
-        this._likeButton.classList.add('container__button-img_type_active');
+        this._likeButton.classList.add('container__delete-button-img_type_active');
         return
       }
     })

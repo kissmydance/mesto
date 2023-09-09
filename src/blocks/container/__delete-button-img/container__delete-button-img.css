@@ -1,5 +1,6 @@
 .container__delete-button-img {
     transition: opacity 0.4s;
+    display: none;
 }
 
 .container__delete-button-img:hover {
