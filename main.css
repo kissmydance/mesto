@@ -23,6 +23,7 @@
 .container__button-img_type_active{background-image:url(./image/serdceactive.e787eeb70bb65b7b453a.svg);z-index:32}
 .container__delete-button{background-color:transparent;border:none;box-sizing:border-box;cursor:pointer;height:19px;margin:0;padding:0;position:absolute;right:20px;top:20px;transition:.3s;width:18px}.container__delete-button:hover{opacity:.5}
 .container__button-img{z-index:1}
+.container__link{background-color:transparent;border:none;cursor:pointer}
 .container__like-box{font-family:Inter,Arial,sans-serif;font-size:13px;font-weight:400;line-height:16px;margin:0;padding:0;text-align:center}
 .container__like-bar{display:flex;flex-direction:column;justify-content:center}
 .container__delete-button-img{display:none;transition:opacity .4s}.container__delete-button-img:hover{cursor:pointer;opacity:50%}
@@ -48,6 +49,5 @@
 .popup_opened{opacity:1;visibility:visible}
 .popup__container_type_delete-confirmed{background-color:#fff;border-radius:10px;min-width:358px;padding:34px 36px 37px}@media screen and (max-width:659px){.popup__container_type_delete-confirmed{min-width:238px;padding:25px 22px}}
 .popup__container_type_delete-confirmed{background-color:#fff;border-radius:10px;min-width:358px;padding:34px 36px 37px}@media screen and (max-width:659px){.popup__container_type_delete-confirmed{min-width:238px;padding:25px 22px}}
-.popup__input-button_type_confirmation{margin:0}
 .popup_background-dark{background-color:rgba(0,0,0,.9)}
 
