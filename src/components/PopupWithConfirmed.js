@@ -3,7 +3,7 @@ import Popup from "./Popup.js";
 class PopupWithConfirmed extends Popup {
     constructor(popupElement, handleButtonConfirm) {
         super(popupElement);
-        this._button = document.querySelector('.popup__input-button_type_confirmation');
+        this._button = document.querySelector('.popup__form-button_type_confirmation');
         this._handleButtonConfirm = handleButtonConfirm;
         this._buttonDefaultText = this._button.textContent;
     }
