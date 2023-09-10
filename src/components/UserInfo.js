@@ -15,7 +15,7 @@ class UserInfo {
         }
     }
 
-    setUserInfo(name, about, avatar, userId) {
+setUserInfo({name, about, avatar, userId}) {
         this._name.textContent = name;
         this._job.textContent = about;
         this._avatar.src = avatar;

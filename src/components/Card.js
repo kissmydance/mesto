@@ -44,7 +44,7 @@ class Card {
   _checkLikeStatus() {
     this._likes.forEach(item => {
       if (item._id === this._user) {
-        this._likeButton.classList.add('container__delete-button-img_type_active');
+        this._likeButton.classList.add('container__button-img_type_active');
         return
       }
     })
@@ -62,6 +62,7 @@ class Card {
   };
 
   toggleButtonLike(likes) {
+    this._likes = likes;
     this._likeBox.textContent = likes.length;
     this._likeButton.classList.toggle('container__button-img_type_active');
   }
